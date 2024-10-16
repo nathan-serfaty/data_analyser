@@ -11,12 +11,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-iln!#a_(pxfh&nq+0hqjfb_pikx1e(5prdpv0jhiv6xw^60e^p')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  
+DEBUG = False  
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
+    'https://data_analyser.albertjuniorconsulting.fr',
+    'https://www.data_analyser.albertjuniorconsulting.fr'
 ]
 
-ALLOWED_HOSTS = ['data-analyser-app-8bd547c4d508.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'data_analyser.albertjuniorconsulting.fr', 'www.data_analyser.albertjuniorconsulting.fr']
 
 # Application definition
 INSTALLED_APPS = [
@@ -33,8 +35,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Assurez-vous que ce middleware est le premier
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Assurez-vous que ce middleware est le premier
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',

@@ -1,10 +1,34 @@
 # Environnements virtuels
-env/
+.env/
 .venv/
 
-# Fichiers locaux
+# Paramètres d'environnement
 .env
-.DS_Store
 
-# Fichiers Node.js
-node_modules/
+# Dépendances
+/node_modules
+/.pnp
+.pnp.js
+
+# Logs
+*.log
+logs/
+
+# Base de données SQLite (si utilisée)
+*.sqlite3
+
+# Fichiers compilés Python
+*.pyc
+__pycache__/
+
+# Cache d'environnement Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django stuff:
+db.sqlite3
+/staticfiles/
+/media/
+
+# Fichiers divers
+.DS_Store
