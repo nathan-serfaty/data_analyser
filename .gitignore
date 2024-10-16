@@ -1,0 +1,10 @@
+# Environnements virtuels
+env/
+.venv/
+
+# Fichiers locaux
+.env
+.DS_Store
+
+# Fichiers Node.js
+node_modules/
